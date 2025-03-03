@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    var completionButtons = document.querySelectorAll('.bg-blue-600.text-white.px-4.py-2.rounded-lg.text-sm');
+    const completionButtons = document.querySelectorAll('.bg-blue-600.text-white.px-4.py-2.rounded-lg.text-sm');
     completionButtons.forEach(function(button) {
         if (button.textContent.trim() === 'Completed') {
             button.classList.add('completion-button');
@@ -11,14 +11,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.target.classList.contains('completion-button')) {
             event.preventDefault();
             
-            var navValue = parseInt(document.getElementById('nav-value').textContent.trim());
-            var taskValue = parseInt(document.getElementById('task-value').textContent.trim());
+            const navValue = parseInt(document.getElementById('nav-value').textContent.trim());
+            const taskValue = parseInt(document.getElementById('task-value').textContent.trim());
             
             document.getElementById('nav-value').textContent = navValue + 1;
             document.getElementById('task-value').textContent = taskValue - 1;
             
-            var taskCard = event.target.closest('.bg-indigo-100');
-            var taskName = taskCard.querySelector('h2.font-bold.text-lg').textContent;
+            const taskCard = event.target.closest('.bg-indigo-100');
+            const taskName = taskCard.querySelector('h2.font-bold.text-lg').textContent;
             
             addToActivityLog(taskName);
             
@@ -40,12 +40,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function addToActivityLog(taskName) {
-        var activityLog = document.querySelector('aside');
+        const activityLog = document.querySelector('aside');
         
-        var logEntry = document.createElement('div');
+        const logEntry = document.createElement('div');
         logEntry.className = 'bg-white p-3 rounded-lg mt-3 shadow-md';
         
-        var timeString = new Date().toLocaleTimeString();
+        const timeString = new Date().toLocaleTimeString();
         
         logEntry.innerHTML = '<p class="text-sm text-gray-600">You completed the task <strong>' + taskName + '</strong> at ' + timeString + '</p>';
         
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     document.querySelector('aside button').addEventListener('click', function() {
-        var logEntries = document.querySelectorAll('aside .bg-white.p-3');
+        const logEntries = document.querySelectorAll('aside .bg-white.p-3');
         logEntries.forEach(function(entry) {
             entry.remove();
         });
