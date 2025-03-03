@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Quicksand:wght@300..700&family=Sora:wght@100..800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body id="bg" class="font-poppins">
+
+    <section>
+        <header class="rounded-lg">
+            <nav class="flex m-3 shadow-lg rounded-md items-center p-2">
+                <img src="assets/logo.png" class="m-2" alt="">
+                <h1 class="flex items-center text-lg">
+                    Dev<span class="font-bold">Board</span>
+                </h1>
+                <div class="flex justify-end items-center ml-auto gap-5">
+                    <button id="back-button"
+                        class="bg-blue-600 text-white font-bold px-4 py-2 rounded-lg text-sm cursor-pointer">Back to
+                        Desk</button>
+                </div>
+            </nav>
+        </header>
+    </section>
+    <h1 class="font-bold justify-center text-center">Blogs</h1>
+
+    <section class="rounded-lg">
+        <div class=" m-2 shadow-lg rounded-md p-4">
+            <h2 class="font-bold">Question 1: What are the different ways to select an element in the DOM?</h2>
+            <hr class="text-gray-300">
+            <p class="font-normal">document.getElementById("myElement");
+                document.getElementsByClassName("myClass");
+                document.querySelector(".myClass");
+                document.querySelectorAll(".myClass");
+            </p>
+        </div>
+        <div class=" m-2 shadow-lg rounded-md p-4">
+            <h2 class="font-bold">Question 2: What is the difference between innerHTML, innerText, and textContent?</h2>
+            <hr class="text-gray-300">
+            <p class="font-normal">The difference between `innerHTML`, `innerText`, and `textContent` lies in how they
+                handle content.
+                `innerHTML` retrieves or sets HTML, including tags and child elements. `innerText` gets or sets only the
+                visible text, ignoring hidden elements and preserving formatting. `textContent` extracts all text,
+                including hidden elements, but does not process HTML tags.</p>
+        </div>
+        <div class=" m-2 shadow-lg rounded-md p-4">
+            <h2 class="font-bold">Question 3: What is event delegation in the DOM?</h2>
+            <hr class="text-gray-300">
+            <p class="font-normal">Event delegation is a technique where a parent element listens for events on its
+                child elements instead
+                of adding event listeners to each child separately.</p>
+        </div>
+        <div class=" m-2 shadow-lg rounded-md p-4">
+            <h2 class="font-bold">Question 4: What is event bubbling in the DOM?</h2>
+            <hr class="text-gray-300">
+            <p class="font-normal">Event bubbling is a mechanism where an event starts from the target element and
+                propagates up through its
+                parent elements.</p>
+        </div>
+        <div class=" m-2 shadow-lg rounded-md p-4">
+            <h2 class="font-bold">Question 5: How do you create, add, and remove elements using JavaScript?</h2>
+            <hr class="text-gray-300">
+            <p class="font-normal">To create, add, and remove elements in JavaScript, use `document.createElement()` to
+                generate a new
+                element, then insert it into the DOM using methods like `appendChild()` or `insertBefore()`. To remove
+                an element, use `.remove()` or `parentNode.removeChild()`. These methods allow dynamic manipulation of
+                the webpage structure.</p>
+        </div>
+    </section>
+    <script src="discover.js"></script>
+
+</body>
+
+</html>
